@@ -35,6 +35,7 @@ Transform:
   m_Children:
   - {fileID: 3927356272532626119}
   - {fileID: 7660955761198567059}
+  - {fileID: 4285226333645447984}
   m_Father: {fileID: 6499421210746580663}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -176,7 +177,19 @@ MonoBehaviour:
     m_ActionId: 5f340e18-cc20-40e6-86d0-ed69a90df35c
     m_ActionName: Player/Look[/Mouse/delta,/Pen/delta]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7239611131478780711}
+        m_TargetAssemblyTypeName: FireHandler, Assembly-CSharp
+        m_MethodName: OnFire
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 227e1a39-4311-4431-949f-049fc04fe9bc
     m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
@@ -235,6 +248,7 @@ GameObject:
   - component: {fileID: 7660955761198567059}
   - component: {fileID: 1803722079543252420}
   - component: {fileID: 2775914508441391594}
+  - component: {fileID: 7239611131478780711}
   m_Layer: 0
   m_Name: RunState
   m_TagString: Untagged
@@ -285,6 +299,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnRate: 10
   player: {fileID: 5644688697536025379}
+--- !u!114 &7239611131478780711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6442547857078629941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab0a6dcc695b77459228bee1e2f96c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 3923023202852249556, guid: 2bf599c53078d814b981b4fe2cd0e13a, type: 3}
+  throwPoint: {fileID: 4285226333645447984}
 --- !u!1 &7409403043938655865
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +396,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &7977198273574824618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4285226333645447984}
+  m_Layer: 0
+  m_Name: ThrowPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4285226333645447984
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7977198273574824618}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.453, z: 0.833}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5644688697536025379}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8575819406230771429
 GameObject:
   m_ObjectHideFlags: 0
