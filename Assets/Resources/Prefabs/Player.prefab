@@ -110,7 +110,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52cd08626cb80784e8cf0b09b5982bf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_delay: 0.15
+  m_delay: 0
+  m_looping: 0
+  m_autostart: 1
   m_event:
     m_PersistentCalls:
       m_Calls:
@@ -389,8 +391,8 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ff96ef60-1a6a-4264-a26e-6bb9f1a6f9f7
     m_ActionName: Player/Block[/XInputControllerWindows/leftTrigger]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -509,6 +511,7 @@ GameObject:
   - component: {fileID: 2775914508441391594}
   - component: {fileID: 7239611131478780711}
   - component: {fileID: 1566988924497685002}
+  - component: {fileID: 2519878841045915695}
   m_Layer: 0
   m_Name: RunState
   m_TagString: Untagged
@@ -574,6 +577,21 @@ MonoBehaviour:
   projectile: {fileID: 3923023202852249556, guid: 2bf599c53078d814b981b4fe2cd0e13a, type: 3}
   throwPoint: {fileID: 4285226333645447984}
   acorns: {fileID: 141348944599881008}
+  fired:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2519878841045915695}
+        m_TargetAssemblyTypeName: EventAfterDelay, Assembly-CSharp
+        m_MethodName: StartTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1566988924497685002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -612,6 +630,36 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 6442547857078629941}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2519878841045915695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6442547857078629941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52cd08626cb80784e8cf0b09b5982bf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_delay: 2
+  m_looping: 1
+  m_autostart: 0
+  m_event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 141348944599881008}
+        m_TargetAssemblyTypeName: AcornHolder, Assembly-CSharp
+        m_MethodName: AddAcorns
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

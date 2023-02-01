@@ -9,23 +9,40 @@ using UnityEngine.Events;
 public class EventAfterDelay : MonoBehaviour
 {
     public float m_delay;
+    public bool m_looping = false;
+    public bool m_autostart = true;
     public UnityEvent m_event;
-    private Coroutine coroutine = null;
+    private Coroutine m_coroutine = null;
 
     void OnEnable()
     {
-        coroutine = StartCoroutine(invokeAfter());
+        if (m_autostart)
+            StartTimer();
+    }
+
+    public void StartTimer()
+    {
+        StopTimer();
+        m_coroutine = StartCoroutine(invokeAfter());
     }
 
     private IEnumerator invokeAfter()
     {
         yield return new WaitForSeconds(m_delay);
         m_event?.Invoke();
+
+        if (m_looping)
+            StartTimer();
+    }
+
+    public void StopTimer()
+    {
+        if (m_coroutine != null)
+            StopCoroutine(m_coroutine);
     }
 
     private void OnDisable()
     {
-        if (coroutine != null)
-            StopCoroutine(coroutine);
+        StopTimer();
     }
 }
