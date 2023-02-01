@@ -10,6 +10,7 @@ using UnityEngine.Events;
 public class AcornHolder : MonoBehaviour
 {
     public int maxAcorns;
+    public UnityEvent<float> acornsChanged;
     private int currentAcorns;
 
     private void Start()
@@ -32,6 +33,7 @@ public class AcornHolder : MonoBehaviour
         if (currentAcorns > 0)
         {
             currentAcorns--;
+            acornsChanged?.Invoke(currentAcorns);
             return true;
         }
         else
@@ -46,5 +48,6 @@ public class AcornHolder : MonoBehaviour
     {
         currentAcorns = Math.Clamp
             (currentAcorns + amount, currentAcorns, maxAcorns);
+        acornsChanged?.Invoke(currentAcorns);
     }
 }
