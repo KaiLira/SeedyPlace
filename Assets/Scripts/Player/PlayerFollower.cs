@@ -6,8 +6,7 @@ using UnityEngine.InputSystem;
 
 /// <summary>
 /// Handles Camera movement for the player, including following the
-/// player around, changing the angle according to input as well as
-/// moving to avoid obstructions.
+/// player around and changing the angle according to input.
 /// </summary>
 public class PlayerFollower : MonoBehaviour
 {
@@ -35,17 +34,6 @@ public class PlayerFollower : MonoBehaviour
         Vector3 targetPos = Utils.Vec3FromComps
             (m_targetPitch, m_targetYaw, m_targetDistance)
             + m_player.position;
-
-        // Check for collidiers obstructing view
-        if (Physics.Raycast(
-            m_player.position,
-            (targetPos - m_player.position),
-            out RaycastHit hit,
-            (targetPos - m_player.position).magnitude
-            ))
-        {
-            targetPos = hit.point;
-        }
 
         // Lerp the position of the camera
         transform.position = Vector3.Lerp

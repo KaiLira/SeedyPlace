@@ -14,14 +14,9 @@ public class ButtonEvents : MonoBehaviour
     private UnityEvent _buttonPressed;
     [SerializeField]
     private UnityEvent _buttonReleased;
-    private bool correction = false;
 
     public void OnButton(InputAction.CallbackContext ctx)
     {
-        correction = !correction;
-        if (correction)
-            return;
-
         if (ctx.ReadValueAsButton())
             _buttonPressed?.Invoke();
         else
