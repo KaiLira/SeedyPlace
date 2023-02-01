@@ -12,7 +12,7 @@ public class FireHandler : MonoBehaviour
     public void OnFire(InputAction.CallbackContext context)
     {
         corrector = !corrector;
-        if (corrector || !context.ReadValueAsButton())
+        if (corrector || !context.ReadValueAsButton() || !isActiveAndEnabled)
             return;
 
         var proj = Instantiate(projectile);
