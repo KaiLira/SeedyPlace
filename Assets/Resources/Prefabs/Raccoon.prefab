@@ -492,6 +492,7 @@ GameObject:
   - component: {fileID: 6426473938007208832}
   - component: {fileID: 4865544258344687692}
   - component: {fileID: 563591504499319539}
+  - component: {fileID: 5107424566479949714}
   m_Layer: 0
   m_Name: Windup
   m_TagString: Untagged
@@ -558,7 +559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetHolder: {fileID: 256343036994515360}
-  range: 2.2
+  range: 3
   rangeEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -577,6 +578,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5107424566479949714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3849067832767756362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a3fd88663be0b4daf96f6289f6c75b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holder: {fileID: 256343036994515360}
+  raccoon: {fileID: 2779247796963910512}
 --- !u!1 &4428950910102489855
 GameObject:
   m_ObjectHideFlags: 0
