@@ -72,6 +72,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1755671577601552116}
   - component: {fileID: 9076241729109571517}
+  - component: {fileID: 6781604646282700260}
+  - component: {fileID: 5566594489182907759}
   m_Layer: 0
   m_Name: Hit
   m_TagString: Untagged
@@ -125,6 +127,37 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!65 &6781604646282700260
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660768064065703151}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6024423, y: 0.31884778, z: 1.3703462}
+  m_Center: {x: 0.027606603, y: 0.11921805, z: 1.1654887}
+--- !u!114 &5566594489182907759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660768064065703151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f377fe93afe684a4cb9656c109662669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onParried:
+    m_PersistentCalls:
+      m_Calls: []
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2036970825275744582
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,7 +588,6 @@ GameObject:
   - component: {fileID: 1827926635272454702}
   - component: {fileID: 91547275010606503}
   - component: {fileID: 2184993985577413410}
-  - component: {fileID: 2501587531423334871}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -628,19 +660,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2501587531423334871
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4428950910102489855}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4866458869376800627
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6546499014171608039}
   m_Layer: 0
   m_Name: Parry
-  m_TagString: Untagged
+  m_TagString: Parry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -886,7 +886,7 @@ GameObject:
   - component: {fileID: 2524584708872671432}
   m_Layer: 0
   m_Name: NormalBlock
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
