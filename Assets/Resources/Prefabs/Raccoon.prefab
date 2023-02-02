@@ -1,5 +1,83 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &102866553192499475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8584372982237428725}
+  - component: {fileID: 3504951015837630122}
+  - component: {fileID: 933223021}
+  m_Layer: 0
+  m_Name: InRangeState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &8584372982237428725
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102866553192499475}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2779247796963910512}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3504951015837630122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102866553192499475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c1154b237b84143ac975d65c169178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetHolder: {fileID: 256343036994515360}
+  range: 2.2
+  rangeEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  rangeExited:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8861873366402870673}
+        m_TargetAssemblyTypeName: StateMachine, Assembly-CSharp
+        m_MethodName: PopStates
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &933223021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102866553192499475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05548f49b3151ff4aba3f8f7bc94d671, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 953276986896486548}
 --- !u!1 &2466908912595027247
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,6 +89,7 @@ GameObject:
   - component: {fileID: 6916196732405825292}
   - component: {fileID: 660694029178007945}
   - component: {fileID: 5822834295598087291}
+  - component: {fileID: 8064004108558808704}
   m_Layer: 0
   m_Name: ChaseState
   m_TagString: Untagged
@@ -61,6 +140,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 953276986896486548}
+--- !u!114 &8064004108558808704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2466908912595027247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c1154b237b84143ac975d65c169178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetHolder: {fileID: 256343036994515360}
+  range: 2
+  rangeEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8861873366402870673}
+        m_TargetAssemblyTypeName: StateMachine, Assembly-CSharp
+        m_MethodName: PushState
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 102866553192499475}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  rangeExited:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2889206441517881688
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,6 +291,7 @@ Transform:
   m_Children:
   - {fileID: 8541143896964447835}
   - {fileID: 6916196732405825292}
+  - {fileID: 8584372982237428725}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
