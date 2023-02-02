@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class PlayerDamageHandler : MonoBehaviour
 {
     public UnityEvent onDamaged;
+    public UnityEvent onDeath;
     private AcornHolder acorns;
 
     private void Start()
@@ -17,7 +18,7 @@ public class PlayerDamageHandler : MonoBehaviour
     public void OnDamaged()
     {
         if (!acorns.TakeAcorn())
-            Debug.Log("It is death");
+            onDeath?.Invoke();
         else
             onDamaged?.Invoke();
     }
