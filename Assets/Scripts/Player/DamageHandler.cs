@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(AcornHolder))]
 public class DamageHandler : MonoBehaviour
 {
+    public UnityEvent onDamaged;
     private AcornHolder acorns;
 
     private void Start()
@@ -16,5 +18,7 @@ public class DamageHandler : MonoBehaviour
     {
         if (!acorns.TakeAcorn())
             Debug.Log("It is death");
+        else
+            onDamaged?.Invoke();
     }
 }
