@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 286790207464228231}
   - component: {fileID: 4292120806371518910}
   - component: {fileID: 3919519320842010701}
+  - component: {fileID: 765776046489410426}
+  - component: {fileID: 8509159855794059470}
   m_Layer: 0
   m_Name: AcornProjectile
   m_TagString: Untagged
@@ -61,6 +63,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_delay: 3
+  m_looping: 0
+  m_autostart: 1
   m_event:
     m_PersistentCalls:
       m_Calls:
@@ -88,6 +92,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd5b0c40b08c9174da6e0403ecfcee00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &765776046489410426
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3923023202852249556}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.33023787
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8509159855794059470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3923023202852249556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f377fe93afe684a4cb9656c109662669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onParried:
+    m_PersistentCalls:
+      m_Calls: []
+  onHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3919519320842010701}
+        m_TargetAssemblyTypeName: ObjectDestroyer, Assembly-CSharp
+        m_MethodName: DestroyObject
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3923023202852249556}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7029722967609506903
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,7 +146,6 @@ GameObject:
   - component: {fileID: 8723065959580037351}
   - component: {fileID: 1455805903070850900}
   - component: {fileID: 9188930807683473981}
-  - component: {fileID: 5000017892024809727}
   - component: {fileID: 4818066310386768017}
   m_Layer: 0
   m_Name: Sphere
@@ -117,7 +163,7 @@ Transform:
   m_GameObject: {fileID: 7029722967609506903}
   m_LocalRotation: {x: -0, y: -0, z: 0.15858936, w: 0.9873447}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.39576983, y: 0.6270685, z: 0.39576983}
+  m_LocalScale: {x: 0.4694226, y: 0.6270685, z: 0.4526024}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5281846742812305782}
@@ -173,19 +219,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &5000017892024809727
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7029722967609506903}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4818066310386768017
 MonoBehaviour:
   m_ObjectHideFlags: 0

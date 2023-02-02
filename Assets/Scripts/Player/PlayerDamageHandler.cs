@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(AcornHolder))]
-public class DamageHandler : MonoBehaviour
+public class PlayerDamageHandler : MonoBehaviour
 {
     public UnityEvent onDamaged;
     private AcornHolder acorns;
