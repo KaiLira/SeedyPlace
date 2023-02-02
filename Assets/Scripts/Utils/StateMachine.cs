@@ -13,9 +13,9 @@ public class StateMachine : MonoBehaviour
     private GameObject _defaultState;
     public Stack<GameObject> _states = new();
 
-    void Start()
+    void OnEnable()
     {
-        PushState(_defaultState);
+        SetState(_defaultState);
     }
 
     public void PushState(GameObject state)

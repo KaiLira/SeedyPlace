@@ -45,4 +45,9 @@ public class EventAfterDelay : MonoBehaviour
     {
         StopTimer();
     }
+
+    public void SetDelay(float delay)
+    {
+        m_delay = delay;
+    }
 }
