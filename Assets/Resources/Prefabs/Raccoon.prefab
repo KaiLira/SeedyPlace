@@ -1,5 +1,66 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2466908912595027247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6916196732405825292}
+  - component: {fileID: 660694029178007945}
+  - component: {fileID: 5822834295598087291}
+  m_Layer: 0
+  m_Name: ChaseState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &6916196732405825292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2466908912595027247}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2779247796963910512}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &660694029178007945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2466908912595027247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb478263f2a35d140b0ed3f9aafdd3da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 8
+  body: {fileID: 953276986896486548}
+  targetHolder: {fileID: 256343036994515360}
+--- !u!114 &5822834295598087291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2466908912595027247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947d0af05051ffd4792d7f231c491e54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 953276986896486548}
 --- !u!1 &2889206441517881688
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,9 +157,8 @@ GameObject:
   - component: {fileID: 7229696141221200084}
   - component: {fileID: 1884945750600772546}
   - component: {fileID: 953276986896486548}
-  - component: {fileID: 1964657520024797636}
-  - component: {fileID: 2488190576444445255}
-  - component: {fileID: 7165543609476061314}
+  - component: {fileID: 256343036994515360}
+  - component: {fileID: 8861873366402870673}
   m_Layer: 0
   m_Name: Raccoon
   m_TagString: Untagged
@@ -119,6 +179,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8541143896964447835}
+  - {fileID: 6916196732405825292}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -202,7 +263,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &1964657520024797636
+--- !u!114 &256343036994515360
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,7 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
---- !u!114 &2488190576444445255
+--- !u!114 &8861873366402870673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -224,19 +285,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4866458869376800627}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb478263f2a35d140b0ed3f9aafdd3da, type: 3}
+  m_Script: {fileID: 11500000, guid: fc44ae99ff837dc4e8d3e8de20df7f23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
---- !u!114 &7165543609476061314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4866458869376800627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 947d0af05051ffd4792d7f231c491e54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _defaultState: {fileID: 2466908912595027247}
