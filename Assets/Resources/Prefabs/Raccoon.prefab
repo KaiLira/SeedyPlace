@@ -789,7 +789,7 @@ GameObject:
   - component: {fileID: 256343036994515360}
   - component: {fileID: 8861873366402870673}
   - component: {fileID: 6266163536153427694}
-  - component: {fileID: 6022957558043719343}
+  - component: {fileID: 1675497370297337665}
   m_Layer: 0
   m_Name: Raccoon
   m_TagString: Untagged
@@ -938,32 +938,20 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6022957558043719343}
-        m_TargetAssemblyTypeName: ObjectDestroyer, Assembly-CSharp
-        m_MethodName: InstanciateObject
-        m_Mode: 2
+      - m_Target: {fileID: 1675497370297337665}
+        m_TargetAssemblyTypeName: WaveObject, Assembly-CSharp
+        m_MethodName: Despawn
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8875038632153296949, guid: 9100e54b2a03b3c4a965c0add756f164, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6022957558043719343}
-        m_TargetAssemblyTypeName: ObjectDestroyer, Assembly-CSharp
-        m_MethodName: DestroyObject
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 4866458869376800627}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   currentTime: -0.2
---- !u!114 &6022957558043719343
+--- !u!114 &1675497370297337665
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -972,9 +960,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4866458869376800627}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd5b0c40b08c9174da6e0403ecfcee00, type: 3}
+  m_Script: {fileID: 11500000, guid: 67e656e471323fe4c86a1a33e08c433b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 11400000, guid: 454a35196d8d96b42ae3cd58d53514ef, type: 2}
+  treePrefab: {fileID: 8875038632153296949, guid: 9100e54b2a03b3c4a965c0add756f164, type: 3}
 --- !u!1 &8666511274846501119
 GameObject:
   m_ObjectHideFlags: 0
