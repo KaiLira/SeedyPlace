@@ -940,6 +940,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6022957558043719343}
         m_TargetAssemblyTypeName: ObjectDestroyer, Assembly-CSharp
+        m_MethodName: InstanciateObject
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8875038632153296949, guid: 9100e54b2a03b3c4a965c0add756f164, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6022957558043719343}
+        m_TargetAssemblyTypeName: ObjectDestroyer, Assembly-CSharp
         m_MethodName: DestroyObject
         m_Mode: 2
         m_Arguments:
