@@ -470,6 +470,18 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4111009854271198640, guid: b03d11aa104aea54a831304a7e670faf, type: 3}
+      propertyPath: maxWait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4111009854271198640, guid: b03d11aa104aea54a831304a7e670faf, type: 3}
+      propertyPath: minWait
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4111009854271198640, guid: b03d11aa104aea54a831304a7e670faf, type: 3}
+      propertyPath: downTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4111009854271198640, guid: b03d11aa104aea54a831304a7e670faf, type: 3}
       propertyPath: growthRate
       value: 2
       objectReference: {fileID: 0}
@@ -531,6 +543,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2117149599104396783, guid: aa85a171bb38f9947b6463c5de846f63, type: 3}
+      propertyPath: m_targetDistance
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 6499421210746580663, guid: aa85a171bb38f9947b6463c5de846f63, type: 3}
       propertyPath: m_RootOrder
       value: 0
