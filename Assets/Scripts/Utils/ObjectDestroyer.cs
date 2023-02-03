@@ -12,4 +12,9 @@ public class ObjectDestroyer : MonoBehaviour
     {
         Destroy(obj);
     }
+
+    public void InstanciateObject(GameObject obj)
+    {
+        Instantiate(obj, transform.position, transform.rotation);
+    }
 }
