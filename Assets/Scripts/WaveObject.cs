@@ -7,8 +7,9 @@ using UnityEngine;
 /// </summary>
 public class WaveObject : MonoBehaviour
 {
-    public WaveManager manager;
     public GameObject treePrefab;
+    [HideInInspector]
+    public WaveManager manager;
 
     public void Despawn()
     {
