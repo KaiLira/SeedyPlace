@@ -386,7 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb478263f2a35d140b0ed3f9aafdd3da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
   body: {fileID: 953276986896486548}
   targetHolder: {fileID: 256343036994515360}
 --- !u!114 &5822834295598087291
@@ -963,8 +963,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67e656e471323fe4c86a1a33e08c433b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 11400000, guid: 454a35196d8d96b42ae3cd58d53514ef, type: 2}
   treePrefab: {fileID: 8875038632153296949, guid: 9100e54b2a03b3c4a965c0add756f164, type: 3}
+  manager: {fileID: 11400000, guid: 454a35196d8d96b42ae3cd58d53514ef, type: 2}
 --- !u!1 &8666511274846501119
 GameObject:
   m_ObjectHideFlags: 0
