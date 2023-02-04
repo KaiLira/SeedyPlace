@@ -14,7 +14,7 @@ public class EnemyDamageHandler : MonoBehaviour
 
     public void OnDamaged()
     {
-        currentTime += 1f;
+        currentTime += 2f;
     }
 
     public void HastenTime(float seconds)
