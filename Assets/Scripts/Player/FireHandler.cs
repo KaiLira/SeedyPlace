@@ -21,8 +21,8 @@ public class FireHandler : MonoBehaviour
         if (!acorns.TakeAcorn())
             return;
 
-        var proj = Instantiate(projectile);
-        proj.transform.SetPositionAndRotation(throwPoint.position, throwPoint.rotation);
+        var proj = Instantiate(projectile, throwPoint.position, throwPoint.rotation);
+        proj.tag = tag;
         fired?.Invoke();
     }
 }
