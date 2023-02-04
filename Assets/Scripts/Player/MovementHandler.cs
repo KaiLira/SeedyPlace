@@ -23,16 +23,23 @@ public class MovementHandler : MonoBehaviour
     {
         float prevY = player.velocity.y;
         player.velocity = new Vector3(intention.x, prevY, intention.y);
+  
+    }
 
+    void Update()
+    {
         if (player.velocity != Vector3.zero)
         {
-            patas.Play();
-            Debug.Log("Iniciar musica");
+            if (!patas.isPlaying)
+            {
+                patas.Play();
+
+                Debug.Log("Iniciar musica");
+            }
         }
         else
         {
             patas.Stop();
-            Debug.Log("Parar musica");
         }
     }
 }

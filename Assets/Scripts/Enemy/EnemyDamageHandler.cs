@@ -11,10 +11,12 @@ public class EnemyDamageHandler : MonoBehaviour
     public float totalTime;
     public UnityEvent onDeath;
     public float currentTime = -0.2f;
+    public AudioSource Guamazo;
 
     public void OnDamaged()
     {
         currentTime += 2f;
+        Guamazo.Play();
     }
 
     public void HastenTime(float seconds)
