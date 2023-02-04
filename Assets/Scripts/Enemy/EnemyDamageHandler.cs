@@ -11,6 +11,7 @@ public class EnemyDamageHandler : MonoBehaviour
     public float totalTime;
     public UnityEvent onDeath;
     public float currentTime = -0.2f;
+    public AudioSource Guamazo;
 
     /// <summary>
     /// Returns a float between 0 and 1 of how long the entity has to live
@@ -27,6 +28,7 @@ public class EnemyDamageHandler : MonoBehaviour
     public void OnDamaged()
     {
         currentTime += 2f;
+        Guamazo.Play();
     }
 
     public void HastenTime(float seconds)
