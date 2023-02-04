@@ -5,9 +5,12 @@ using UnityEngine.Events;
 
 public class WaveManager : MonoBehaviour
 {
-    public GameObject waveObject;
-    public int size;
-    public int growthRate;
+    public GameObject raccoon;
+    public GameObject porcupine;
+    public int raccoonCount;
+    public int porcupineCount;
+    public int raccoonGrowthRate;
+    public int porcupineGrowthRate;
     public float downTime;
     public float minWait;
     public float maxWait;
@@ -22,18 +25,30 @@ public class WaveManager : MonoBehaviour
 
     private IEnumerator startWave()
     {
-        waveStarted?.Invoke(++currentWave);
+        waveStarted?.Invoke(++currentWave + 1);
         yield return new WaitForSeconds(downTime);
 
-        activeCount = size + currentWave * growthRate;
-        for (int i = 0; i < activeCount; i++)
+        var activeRaccoons = raccoonCount + currentWave * raccoonGrowthRate;
+        for (int i = 0; i < activeRaccoons; i++)
         {
             yield return new WaitForSeconds(Random.Range(minWait, maxWait));
 
             var location = transform.GetChild(Random.Range(0, transform.childCount));
-            var obj = Instantiate(waveObject, location.position, location.rotation);
+            var obj = Instantiate(raccoon, location.position, location.rotation);
             obj.GetComponent<WaveObject>().manager = this;
         }
+
+        var activePorcupines = porcupineCount + currentWave * porcupineGrowthRate;
+        for (var i = 0; i < activePorcupines; i++)
+        {
+            yield return new WaitForSeconds(Random.Range(minWait, maxWait));
+
+            var location = transform.GetChild(Random.Range(0, transform.childCount));
+            var obj = Instantiate(porcupine, location.position, location.rotation);
+            obj.GetComponent<WaveObject>().manager = this;
+        }
+
+        activeCount = activeRaccoons + activePorcupines;
     }
 
     /// <summary>
