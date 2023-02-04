@@ -49,6 +49,14 @@ public class DamageOnTrigger : MonoBehaviour
             return;
         }
 
+        var equal = hits.Find(hit => hit.CompareTag(tag));
+        if (equal != null)
+        {
+            hits = new List<Collider>();
+            onHit?.Invoke();
+            return;
+        }
+
         foreach (var hit in hits)
             hit.gameObject.SendMessage
                 ("OnDamaged", SendMessageOptions.DontRequireReceiver);
