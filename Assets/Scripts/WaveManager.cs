@@ -12,8 +12,6 @@ public class WaveManager : MonoBehaviour
     public int raccoonGrowthRate;
     public int porcupineGrowthRate;
     public float downTime;
-    public float minWait;
-    public float maxWait;
     public UnityEvent<int> waveStarted;
     private int activeCount;
     private int currentWave = -1;
@@ -31,8 +29,6 @@ public class WaveManager : MonoBehaviour
         var activeRaccoons = raccoonCount + currentWave * raccoonGrowthRate;
         for (int i = 0; i < activeRaccoons; i++)
         {
-            yield return new WaitForSeconds(Random.Range(minWait, maxWait));
-
             var location = transform.GetChild(Random.Range(0, transform.childCount));
             var obj = Instantiate(raccoon, location.position, location.rotation);
             obj.GetComponent<WaveObject>().manager = this;
@@ -41,8 +37,6 @@ public class WaveManager : MonoBehaviour
         var activePorcupines = porcupineCount + currentWave * porcupineGrowthRate;
         for (var i = 0; i < activePorcupines; i++)
         {
-            yield return new WaitForSeconds(Random.Range(minWait, maxWait));
-
             var location = transform.GetChild(Random.Range(0, transform.childCount));
             var obj = Instantiate(porcupine, location.position, location.rotation);
             obj.GetComponent<WaveObject>().manager = this;

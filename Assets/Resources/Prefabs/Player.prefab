@@ -878,7 +878,7 @@ GameObject:
   - component: {fileID: 2519878841045915695}
   m_Layer: 0
   m_Name: RunState
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -939,7 +939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aab0a6dcc695b77459228bee1e2f96c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 3923023202852249556, guid: 2bf599c53078d814b981b4fe2cd0e13a, type: 3}
+  projectile: {fileID: 3923023202852249556, guid: 3bf94d9b16892c24da9700cbbc7efe6c, type: 3}
   throwPoint: {fileID: 4285226333645447984}
   acorns: {fileID: 141348944599881008}
   fired:
