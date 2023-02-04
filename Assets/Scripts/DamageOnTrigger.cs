@@ -50,7 +50,8 @@ public class DamageOnTrigger : MonoBehaviour
         }
 
         foreach (var hit in hits)
-            hit.gameObject.SendMessage("OnDamaged");
+            hit.gameObject.SendMessage
+                ("OnDamaged", SendMessageOptions.DontRequireReceiver);
 
         onHit?.Invoke();
         hits = new List<Collider>();
