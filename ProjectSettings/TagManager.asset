@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Block
   - Parry
+  - Mapache
   layers:
   - Default
   - TransparentFX
@@ -13,8 +14,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - SusanaDistancia
+  - Player
   - 
   - 
   - 

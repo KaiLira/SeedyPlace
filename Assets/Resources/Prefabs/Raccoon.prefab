@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8584372982237428725}
   - component: {fileID: 933223021}
   - component: {fileID: 2945978320997626568}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InRangeState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 9076241729109571517}
   - component: {fileID: 6781604646282700260}
   - component: {fileID: 5566594489182907759}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 8742875125243316888}
   - component: {fileID: 8211681037800546316}
   - component: {fileID: 6635964944449962277}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: asdf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5095924312653562721}
   - component: {fileID: 2256730366196733694}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Recovery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 660694029178007945}
   - component: {fileID: 5822834295598087291}
   - component: {fileID: 8064004108558808704}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ChaseState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,7 +445,7 @@ GameObject:
   - component: {fileID: 8541143896964447835}
   - component: {fileID: 9103066724207328063}
   - component: {fileID: 2943609249723011874}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: asdf4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +529,7 @@ GameObject:
   - component: {fileID: 4865544258344687692}
   - component: {fileID: 563591504499319539}
   - component: {fileID: 5107424566479949714}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Windup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -638,7 +638,7 @@ GameObject:
   m_Component:
   - component: {fileID: 317033334178797559}
   - component: {fileID: 260927470208552227}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: StunnedState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,7 +701,7 @@ GameObject:
   - component: {fileID: 1827926635272454702}
   - component: {fileID: 91547275010606503}
   - component: {fileID: 2184993985577413410}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -790,9 +790,10 @@ GameObject:
   - component: {fileID: 8861873366402870673}
   - component: {fileID: 6266163536153427694}
   - component: {fileID: 1675497370297337665}
-  m_Layer: 0
+  - component: {fileID: 718018989843308604}
+  m_Layer: 6
   m_Name: Raccoon
-  m_TagString: Untagged
+  m_TagString: Mapache
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -876,7 +877,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 1
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -965,6 +966,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   treePrefab: {fileID: 8875038632153296949, guid: 9100e54b2a03b3c4a965c0add756f164, type: 3}
   manager: {fileID: 11400000, guid: 454a35196d8d96b42ae3cd58d53514ef, type: 2}
+--- !u!136 &718018989843308604
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4866458869376800627}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8666511274846501119
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,7 +991,7 @@ GameObject:
   - component: {fileID: 5421795514543176702}
   - component: {fileID: 4370376058709149173}
   - component: {fileID: 8758621355205407347}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: asdf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
