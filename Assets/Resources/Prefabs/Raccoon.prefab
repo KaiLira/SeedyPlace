@@ -386,9 +386,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb478263f2a35d140b0ed3f9aafdd3da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 8
   body: {fileID: 953276986896486548}
   targetHolder: {fileID: 256343036994515360}
+  damageHandler: {fileID: 6266163536153427694}
 --- !u!114 &5822834295598087291
 MonoBehaviour:
   m_ObjectHideFlags: 0
