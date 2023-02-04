@@ -191,6 +191,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7866521272298532449}
+        m_TargetAssemblyTypeName: KnockBack, Assembly-CSharp
+        m_MethodName: Knockback
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHit:
     m_PersistentCalls:
       m_Calls: []
@@ -386,9 +398,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb478263f2a35d140b0ed3f9aafdd3da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 8
   body: {fileID: 953276986896486548}
   targetHolder: {fileID: 256343036994515360}
+  damageHandler: {fileID: 6266163536153427694}
 --- !u!114 &5822834295598087291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -970,6 +983,8 @@ MonoBehaviour:
   manager: {fileID: 11400000, guid: 454a35196d8d96b42ae3cd58d53514ef, type: 2}
 --- !u!136 &718018989843308604
 CapsuleCollider:
+--- !u!114 &7866521272298532449
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}

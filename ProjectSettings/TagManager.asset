@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Block
   - Parry
-  - Mapache
+  - Enemy
   layers:
   - Default
   - TransparentFX
