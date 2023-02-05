@@ -35,7 +35,7 @@ public class DamageOnTrigger : MonoBehaviour
         if (parry != null)
         {
             onParried?.Invoke();
-
+            parry.gameObject.SendMessage("SuccesfulParry");
             hits = new List<Collider>();
             return;
         }
@@ -44,7 +44,7 @@ public class DamageOnTrigger : MonoBehaviour
         if (block != null)
         {
             onHit?.Invoke();
-
+            block.gameObject.SendMessage("SuccesfulBlock");
             hits = new List<Collider>();
             return;
         }
@@ -59,7 +59,9 @@ public class DamageOnTrigger : MonoBehaviour
 
         foreach (var hit in hits)
             hit.gameObject.SendMessage
-                ("OnDamaged", SendMessageOptions.DontRequireReceiver);
+                (
+                "OnDamaged", SendMessageOptions.DontRequireReceiver);
+            
 
         onHit?.Invoke();
         hits = new List<Collider>();
