@@ -191,7 +191,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 5771064060982676185}
         m_TargetAssemblyTypeName: KnockBack, Assembly-CSharp
         m_MethodName: Knockback
         m_Mode: 1
@@ -719,6 +719,7 @@ GameObject:
   - component: {fileID: 6266163536153427694}
   - component: {fileID: 1675497370297337665}
   - component: {fileID: 7654312617857779443}
+  - component: {fileID: 5771064060982676185}
   m_Layer: 6
   m_Name: Raccoon
   m_TagString: Enemy
@@ -941,6 +942,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5771064060982676185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4866458869376800627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 953132a7299a0024c8e3cfbc327a5a18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magnitude: 10
 --- !u!1 &4935768854359539494
 GameObject:
   m_ObjectHideFlags: 0
