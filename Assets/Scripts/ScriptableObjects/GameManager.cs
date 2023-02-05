@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using Unity.VisualScripting;
 
 [CreateAssetMenu(
     fileName = "GameManager",
@@ -11,6 +13,14 @@ using UnityEngine.InputSystem;
 public class GameManager : ScriptableObject
 {
     public GameObject pauseMenu;
+    public GameObject blackScreen;
+    public GameObject gameOver;
+
+    public void OnDeath()
+    {
+        Time.timeScale = 0f;
+        Instantiate(gameOver);
+    }
 
     public void ReloadScene()
     {
