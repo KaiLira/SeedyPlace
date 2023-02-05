@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 [CreateAssetMenu(
     fileName = "GameManager",
@@ -9,32 +10,55 @@ using UnityEngine.SceneManagement;
 )]
 public class GameManager : ScriptableObject
 {
-    private GameObject pauseMenu = null;
+    public GameObject pauseMenu;
+    public GameObject blackScreen;
+    public GameObject gameOver;
+
+    public void OnDeath()
+    {
+        Time.timeScale = 0f;
+        Instantiate(gameOver);
+    }
 
     public void ReloadScene()
     {
+        Time.timeScale = 1f;
         string currentScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentScene);
     }
 
-    public void PauseGame(GameObject menuPrefab = null)
+    public void PauseGame()
     {
         Time.timeScale = 0f;
-        
-        if (menuPrefab != null)
-        {
-            pauseMenu = Instantiate(menuPrefab);
-        }
+        Instantiate(pauseMenu);
     }
 
     public void ResumeGame()
     {
         Time.timeScale = 1f;
+        Destroy(GameObject.FindWithTag("PauseMenu"));
+    }
 
-        if (pauseMenu != null)
+    public void OnPauseButton(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Performed)
         {
-            Destroy(pauseMenu);
-            pauseMenu = null;
+            if (!GameObject.FindWithTag("PauseMenu"))
+            {
+                PauseGame();
+            }
+            else
+            {
+                ResumeGame();
+            }
+        }
+    }
+
+    public void OnSelectButton(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Performed)
+        {
+            ReloadScene();
         }
     }
 }

@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38359199bdb6f944b1b571f961f4148, type: 3}
   m_Name: GameManager
   m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 9181857468365811182, guid: e8b6de2f10cc7fe44b5b741596a563c5, type: 3}
+  blackScreen: {fileID: 5256852727142469012, guid: 03efe1cef4c863d4296a3eb4fc3039fb, type: 3}
+  gameOver: {fileID: 9014976403843762542, guid: b137bacb5be7be646950c58d49c01676, type: 3}

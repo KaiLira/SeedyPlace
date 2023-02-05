@@ -268,7 +268,11 @@ GameObject:
   - component: {fileID: 6207013497134645742}
   - component: {fileID: 2413089621660328911}
   - component: {fileID: 506836191533439484}
+<<<<<<< HEAD
   - component: {fileID: 5235997930159091676}
+=======
+  - component: {fileID: 4232697961898912295}
+>>>>>>> 614ae89a76c42544267b1a0d945428c01855d244
   m_Layer: 0
   m_Name: Porcupine
   m_TagString: Enemy
@@ -402,7 +406,11 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   currentTime: -0.2
+<<<<<<< HEAD
   Guamazo: {fileID: 5235997930159091676}
+=======
+  Guamazo: {fileID: 4232697961898912295}
+>>>>>>> 614ae89a76c42544267b1a0d945428c01855d244
 --- !u!114 &6207013497134645742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,7 +451,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+<<<<<<< HEAD
 --- !u!82 &5235997930159091676
+=======
+--- !u!82 &4232697961898912295
+>>>>>>> 614ae89a76c42544267b1a0d945428c01855d244
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
