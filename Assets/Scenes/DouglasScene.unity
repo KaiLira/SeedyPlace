@@ -220,7 +220,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 47cc223839ed29b43af64fc24761f465, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -510,37 +510,9 @@ PrefabInstance:
       value: WaveManager
       objectReference: {fileID: 0}
     - target: {fileID: 4111009854271198640, guid: b03d11aa104aea54a831304a7e670faf, type: 3}
-      propertyPath: porcupine
-      value: 
-      objectReference: {fileID: 7671593570299450782, guid: 2e89926b532831b4697cbaf63acd6f06, type: 3}
-    - target: {fileID: 4111009854271198640, guid: b03d11aa104aea54a831304a7e670faf, type: 3}
-      propertyPath: waveStarted.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111009854271198640, guid: b03d11aa104aea54a831304a7e670faf, type: 3}
-      propertyPath: waveStarted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111009854271198640, guid: b03d11aa104aea54a831304a7e670faf, type: 3}
       propertyPath: waveStarted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 796139255}
-    - target: {fileID: 4111009854271198640, guid: b03d11aa104aea54a831304a7e670faf, type: 3}
-      propertyPath: waveStarted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111009854271198640, guid: b03d11aa104aea54a831304a7e670faf, type: 3}
-      propertyPath: waveStarted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: WaveStarted
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111009854271198640, guid: b03d11aa104aea54a831304a7e670faf, type: 3}
-      propertyPath: waveStarted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: WaveCountShower, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111009854271198640, guid: b03d11aa104aea54a831304a7e670faf, type: 3}
-      propertyPath: waveStarted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 6109180298004407520, guid: b03d11aa104aea54a831304a7e670faf, type: 3}
       propertyPath: m_RootOrder
       value: 1
