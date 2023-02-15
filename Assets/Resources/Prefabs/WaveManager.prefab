@@ -362,9 +362,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   raccoon: {fileID: 4866458869376800627, guid: dd432b0dfc4f4554b823e7b51d979373, type: 3}
   porcupine: {fileID: 7671593570299450782, guid: 2e89926b532831b4697cbaf63acd6f06, type: 3}
-  raccoonCount: 3
+  raccoonCount: 2
   porcupineCount: 2
-  raccoonGrowthRate: 2
+  raccoonGrowthRate: 1
   porcupineGrowthRate: 2
   downTime: 5
   waveStarted:

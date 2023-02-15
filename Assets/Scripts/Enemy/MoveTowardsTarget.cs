@@ -8,12 +8,12 @@ public class MoveTowardsTarget : MonoBehaviour
     public Rigidbody body;
     public TargetHolder targetHolder;
     public EnemyDamageHandler damageHandler;
-
+    public AnimationCurve speedCurve;
     private void FixedUpdate()
     {
         body.velocity = 
             (targetHolder.target.transform.position - transform.position).normalized *
             speed *
-            damageHandler.Death01();
+            (1f + speedCurve.Evaluate(damageHandler.DeathProgress()));
     }
 }

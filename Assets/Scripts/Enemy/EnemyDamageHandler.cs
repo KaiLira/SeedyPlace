@@ -15,14 +15,14 @@ public class EnemyDamageHandler : MonoBehaviour
 
     /// <summary>
     /// Returns a float between 0 and 1 of how long the entity has to live
-    /// 1 being full health and 0 being death
+    /// 0 being full health and 1 being death
     /// </summary>
-    public float Death01()
+    public float DeathProgress()
     {
         if (currentTime < 0f)
-            return 1f;
+            return 0f;
 
-        return 1f - Mathf.Clamp01(currentTime / totalTime);
+        return Mathf.Clamp01(currentTime / totalTime);
     }
     
     public void OnDamaged()
